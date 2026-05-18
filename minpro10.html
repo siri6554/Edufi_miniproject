@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HR Manager UI</title>
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#ececec;padding:15px}
+.container{display:grid;grid-template-columns:2fr 1fr;gap:15px;max-width:1400px;margin:auto}
+.card{background:#fff;border-radius:30px;padding:40px;position:relative;overflow:hidden}
+.lines::before{
+content:"";
+position:absolute;
+inset:0;
+background:repeating-linear-gradient(to right,transparent 0,transparent 88px,#e9e9e9 90px);
+pointer-events:none
+}
+
+.hero{height:360px}
+.hero h1{
+font-size:95px;
+line-height:.9;
+font-weight:900;
+color:#111d3a;
+margin-top:50px
+}
+.hero span{color:#bfbfbf}
+
+.hero p{
+margin-top:20px;
+color:#666;
+font-size:14px
+}
+
+.btns{margin-top:25px;display:flex;gap:15px}
+
+button{
+padding:14px 25px;
+border:none;
+border-radius:30px;
+font-weight:bold;
+cursor:pointer
+}
+
+.blue{background:#246bff;color:#fff}
+.white{background:#fff;border:1px solid #ddd}
+
+.float-card{
+position:absolute;
+background:#fff;
+padding:18px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08)
+}
+
+.c1{top:95px;left:250px;width:140px}
+.c2{top:120px;left:380px;width:170px}
+
+.smile{
+position:absolute;
+width:45px;
+height:45px;
+background:#ffb02e;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px
+}
+
+.s1{left:110px;top:180px}
+.s2{right:70px;bottom:70px}
+
+.right{display:grid;gap:15px}
+
+.small h2{
+font-size:48px;
+line-height:1;
+color:#111d3a;
+margin-top:40px
+}
+
+.small p{
+margin-top:15px;
+color:#666;
+font-size:14px;
+line-height:1.6
+}
+
+.tag{
+display:inline-block;
+background:#ffb02e;
+padding:8px 15px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+color:#fff
+}
+
+.learn{
+margin-top:25px;
+background:#246bff;
+color:#fff
+}
+
+.phone{
+position:absolute;
+right:35px;
+top:70px;
+width:90px;
+height:200px;
+background:#fff;
+border-radius:20px;
+box-shadow:0 10px 20px rgba(0,0,0,.08)
+}
+
+.timer{
+position:absolute;
+right:60px;
+bottom:50px;
+background:#fff;
+padding:20px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08)
+}
+
+.timer h3{
+font-size:55px;
+margin:10px 0
+}
+
+.bottom{
+margin-top:15px;
+height:320px
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+margin-top:30px
+}
+
+.box{
+background:#fafafa;
+border-radius:20px;
+padding:20px;
+height:120px
+}
+
+@media(max-width:1000px){
+.container{grid-template-columns:1fr}
+.hero h1{font-size:60px}
+.small h2{font-size:35px}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div>
+
+<div class="card hero lines">
+
+<h1>HR Manager <br><span>Workflow</span></h1>
+
+<p>Transforming HR processes with innovative solutions</p>
+
+<div class="btns">
+<button class="blue">Get Started Today</button>
+<button class="white">Try Demo Account</button>
+</div>
+
+<div class="float-card c1">
+<h3>20</h3>
+<p>Work hour analysis</p>
+</div>
+
+<div class="float-card c2">
+<h3>45min</h3>
+<p>Total work hours</p>
+</div>
+
+<div class="smile s1">☺</div>
+<div class="smile s2">☺</div>
+
+</div>
+
+<div class="card bottom lines">
+
+<div class="grid">
+
+<div class="box">
+<h3>Total Payroll</h3>
+<p>$13,670.00</p>
+</div>
+
+<div class="box">
+<h3>User Flow</h3>
+<p>Supercharge productivity</p>
+</div>
+
+<div class="box">
+<h3>Company Job Levels</h3>
+<p>Job distribution in company</p>
+</div>
+
+<div class="box">
+<h3>Assigned Task</h3>
+<p>Drive productivity efficiently</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="right">
+
+<div class="card small lines">
+
+<span class="tag">Data Summarize</span>
+
+<h2>Efficient Summary Unveiling Key Data Insights</h2>
+
+<p>
+Experience the power of efficient data summarization
+with our cutting-edge solution.
+</p>
+
+<button class="learn">Learn More</button>
+
+<div class="phone"></div>
+
+</div>
+
+<div class="card small lines">
+
+<span class="tag">Time Tracker</span>
+
+<h2>Organize Work Time Effectively With Focus</h2>
+
+<div class="timer">
+<p>Time Tracker</p>
+<h3>10:34:00</h3>
+<small>Previous Tasks</small>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</body>
+</html>
