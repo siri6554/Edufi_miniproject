@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Videmy Landing Page</title>
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+
+body{
+background:#ececec;
+padding:20px
+}
+
+.container{
+max-width:1400px;
+margin:auto;
+background:#edf3ff;
+border-radius:25px;
+padding:25px;
+min-height:100vh;
+box-shadow:0 10px 30px rgba(0,0,0,.08)
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#fff;
+padding:15px 25px;
+border-radius:20px;
+max-width:1000px;
+margin:auto
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:26px;
+font-weight:bold
+}
+
+.logo-box{
+width:38px;
+height:38px;
+background:#d7ef47;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold
+}
+
+.menu{
+display:flex;
+gap:35px;
+list-style:none;
+color:#555;
+font-size:15px
+}
+
+.app-btn{
+background:#222;
+color:#fff;
+padding:12px 22px;
+border:none;
+border-radius:15px;
+font-weight:bold;
+cursor:pointer
+}
+
+.hero{
+text-align:center;
+padding:120px 20px 80px
+}
+
+.tag{
+display:inline-block;
+background:#fff;
+padding:10px 20px;
+border-radius:20px;
+font-size:14px;
+margin-bottom:30px;
+box-shadow:0 4px 10px rgba(0,0,0,.05)
+}
+
+.hero h1{
+font-size:78px;
+line-height:1.1;
+font-weight:900;
+color:#222;
+margin-bottom:25px
+}
+
+.highlight{
+background:#d7ef47;
+padding:0 12px;
+border-radius:12px
+}
+
+.hero p{
+max-width:850px;
+margin:auto;
+color:#666;
+font-size:18px;
+line-height:1.7
+}
+
+.start-btn{
+margin-top:40px;
+background:#2f2629;
+color:#fff;
+padding:18px 38px;
+border:none;
+border-radius:35px;
+font-size:17px;
+font-weight:bold;
+cursor:pointer
+}
+
+.search-box{
+background:#fff;
+padding:35px;
+border-radius:25px;
+margin-top:80px;
+box-shadow:0 10px 25px rgba(0,0,0,.05)
+}
+
+.search-box h3{
+font-size:34px;
+margin-bottom:30px;
+color:#222
+}
+
+.search-row{
+display:flex;
+gap:18px;
+align-items:center;
+flex-wrap:wrap
+}
+
+.input{
+flex:1;
+min-width:300px;
+padding:18px 22px;
+border:1px solid #e5e5e5;
+border-radius:18px;
+font-size:15px;
+outline:none
+}
+
+.select{
+padding:18px 22px;
+border:1px solid #e5e5e5;
+border-radius:18px;
+background:#fff;
+min-width:170px;
+color:#555
+}
+
+.find-btn{
+background:#2f2629;
+color:#fff;
+padding:18px 35px;
+border:none;
+border-radius:18px;
+font-weight:bold;
+cursor:pointer
+}
+
+.tags{
+margin-top:28px;
+display:flex;
+align-items:center;
+gap:15px;
+flex-wrap:wrap
+}
+
+.tags span{
+color:#444;
+font-weight:bold
+}
+
+.tag-item{
+background:#f3f3f3;
+padding:10px 18px;
+border-radius:18px;
+font-size:14px;
+color:#555
+}
+
+@media(max-width:1000px){
+
+.hero h1{
+font-size:50px
+}
+
+.nav{
+flex-direction:column;
+gap:20px
+}
+
+.menu{
+flex-wrap:wrap;
+justify-content:center
+}
+
+}
+
+@media(max-width:700px){
+
+.hero h1{
+font-size:38px
+}
+
+.search-row{
+flex-direction:column;
+align-items:stretch
+}
+
+.input,
+.select,
+.find-btn{
+width:100%
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="nav">
+
+<div class="logo">
+
+<div class="logo-box">V</div>
+
+Videmy
+
+</div>
+
+<ul class="menu">
+<li>Courses</li>
+<li>Categories</li>
+<li>For Teams</li>
+<li>Pricing</li>
+<li>About Us</li>
+</ul>
+
+<button class="app-btn">Get the app</button>
+
+</div>
+
+<div class="hero">
+
+<div class="tag">Trusted by 50K+ learners</div>
+
+<h1>
+Upgrade Your Skills to <br>
+Unlock 
+<span class="highlight">🚀 🎓 📚</span>
+New Opportunities!
+</h1>
+
+<p>
+Join thousands of learners turning education into achievement
+with gamified courses and expert-led content.
+</p>
+
+<button class="start-btn">Start Learning Free</button>
+
+<div class="search-box">
+
+<h3>Find your perfect course</h3>
+
+<div class="search-row">
+
+<input class="input" type="text"
+placeholder="Search for courses, topics, or skills...">
+
+<select class="select">
+<option>Level</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+</select>
+
+<select class="select">
+<option>Category</option>
+<option>Design</option>
+<option>Marketing</option>
+<option>Programming</option>
+</select>
+
+<button class="find-btn">Find Course</button>
+
+</div>
+
+<div class="tags">
+
+<span>Popular searches:</span>
+
+<div class="tag-item">UI Design</div>
+<div class="tag-item">Social Media</div>
+<div class="tag-item">Digital Marketing</div>
+<div class="tag-item">Public Speaking</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
