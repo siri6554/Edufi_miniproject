@@ -1,0 +1,304 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#5a5a5a;
+  padding:20px;
+}
+
+.dashboard{
+  display:flex;
+  background:#1f1f1f;
+  border-radius:20px;
+  overflow:hidden;
+  min-height:100vh;
+  color:white;
+}
+
+.sidebar{
+  width:260px;
+  background:#242424;
+  padding:25px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  border-right:1px solid #333;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:bold;
+  margin-bottom:40px;
+}
+
+.menu{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.menu-title{
+  color:#888;
+  font-size:12px;
+  margin-top:20px;
+  margin-bottom:8px;
+}
+
+.menu a{
+  padding:12px 15px;
+  border-radius:10px;
+  cursor:pointer;
+  color:#ccc;
+  transition:0.3s;
+}
+
+.menu a:hover{
+  background:#2f2f2f;
+}
+
+.menu .active{
+  background:#343434;
+  color:white;
+}
+
+.logout{
+  margin-top:30px;
+  background:#341919;
+  color:#ff6b6b;
+  border:none;
+  padding:14px;
+  border-radius:12px;
+  cursor:pointer;
+}
+
+.main-content{
+  flex:1;
+  padding:25px;
+}
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+}
+
+.topbar input{
+  width:300px;
+  padding:14px 18px;
+  border:none;
+  border-radius:12px;
+  background:#2d2d2d;
+  color:white;
+}
+
+.topbar button{
+  background:#f1f1f1;
+  color:black;
+  border:none;
+  padding:12px 20px;
+  border-radius:12px;
+  cursor:pointer;
+}
+
+.hero{
+  background:linear-gradient(135deg,#252525,#3b4338);
+  border-radius:20px;
+  padding:35px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+  margin-bottom:25px;
+}
+
+.hero-text h1{
+  font-size:38px;
+  line-height:1.2;
+  margin-bottom:15px;
+}
+
+.hero-text p{
+  color:#bbb;
+  max-width:650px;
+  line-height:1.6;
+  margin-bottom:25px;
+}
+
+.start-btn{
+  background:#2f2f2f;
+  color:white;
+  border:none;
+  padding:14px 22px;
+  border-radius:12px;
+  cursor:pointer;
+}
+
+.hero-icons{
+  display:grid;
+  grid-template-columns:repeat(2,90px);
+  gap:15px;
+}
+
+.icon-box{
+  width:90px;
+  height:90px;
+  background:#343434;
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+}
+
+.large{
+  grid-column:span 2;
+  width:195px;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  margin-bottom:25px;
+}
+
+.card{
+  background:#dce7f2;
+  color:black;
+  padding:25px;
+  border-radius:18px;
+}
+
+.card h2{
+  font-size:42px;
+  margin-bottom:8px;
+}
+
+.green{
+  background:#e4efd5;
+}
+
+.yellow{
+  background:#efe7be;
+}
+
+.purple{
+  background:#e6ddf5;
+}
+
+.content-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.agents,
+.activity{
+  background:#252525;
+  border-radius:20px;
+  padding:20px;
+}
+
+.section-header{
+  margin-bottom:20px;
+}
+
+.section-header h3{
+  font-size:24px;
+}
+
+.agent-card,
+.activity-card{
+  background:#2d2d2d;
+  border-radius:16px;
+  padding:18px;
+  margin-bottom:15px;
+}
+
+.agent-card{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+
+.agent-card h4,
+.activity-card h4{
+  margin:10px 0;
+  font-size:22px;
+}
+
+.agent-card p,
+.activity-card p{
+  color:#aaa;
+  line-height:1.5;
+}
+
+small{
+  color:#888;
+}
+
+.status{
+  background:#0f5132;
+  color:#7dffb1;
+  padding:8px 12px;
+  border-radius:20px;
+  font-size:12px;
+}
+
+.blue{
+  background:#dfe8f7;
+  color:black;
+}
+
+.green-bg{
+  background:#e2f1df;
+  color:black;
+}
+
+@media(max-width:1100px){
+
+  .dashboard{
+    flex-direction:column;
+  }
+
+  .sidebar{
+    width:100%;
+  }
+
+  .stats{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .content-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+}
+
+@media(max-width:700px){
+
+  .stats{
+    grid-template-columns:1fr;
+  }
+
+  .topbar{
+    flex-direction:column;
+    gap:15px;
+    align-items:flex-start;
+  }
+
+  .topbar input{
+    width:100%;
+  }
+
+}
