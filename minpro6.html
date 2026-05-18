@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AURALEE Fashion UI</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#4b4d42;
+      padding:10px;
+      overflow-x:hidden;
+    }
+
+    /* MAIN CONTAINER */
+
+    .container{
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:10px;
+      height:100vh;
+    }
+
+    /* LEFT SECTION */
+
+    .left{
+      background:#1d1c1f;
+      position:relative;
+      overflow:hidden;
+      border-radius:25px;
+      padding:30px;
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      color:white;
+      font-size:12px;
+      margin-bottom:40px;
+      z-index:2;
+      position:relative;
+    }
+
+    .logo{
+      color:#d6ff54;
+      font-weight:bold;
+      font-size:22px;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:30px;
+    }
+
+    /* BACKGROUND IMAGE */
+
+    .bg-image{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:55%;
+      object-fit:cover;
+      opacity:0.35;
+    }
+
+    /* SPRING TEXT */
+
+    .season{
+      position:relative;
+      z-index:2;
+      color:white;
+      font-size:40px;
+      margin-top:40px;
+      font-weight:bold;
+    }
+
+    /* BIG TITLE */
+
+    .big-title{
+      position:absolute;
+      bottom:220px;
+      left:40px;
+      font-size:180px;
+      font-weight:bold;
+      color:#d6ff54;
+      line-height:0.9;
+      z-index:1;
+      letter-spacing:-8px;
+    }
+
+    /* CENTER IMAGE */
+
+    .center-image{
+      position:absolute;
+      top:220px;
+      left:50%;
+      transform:translateX(-50%);
+      width:200px;
+      z-index:3;
+    }
+
+    .center-image img{
+      width:100%;
+      border-radius:8px;
+    }
+
+    /* DESCRIPTION */
+
+    .description{
+      position:absolute;
+      bottom:40px;
+      left:50%;
+      transform:translateX(-50%);
+      color:white;
+      text-align:center;
+      max-width:600px;
+      z-index:3;
+    }
+
+    .description h2{
+      font-size:58px;
+      line-height:1.2;
+      font-weight:bold;
+    }
+
+    .description span{
+      color:#d6ff54;
+    }
+
+    /* RIGHT SECTION */
+
+    .right{
+      background:#1d1c1f;
+      border-radius:25px;
+      padding:25px;
+      position:relative;
+      overflow:hidden;
+      color:white;
+    }
+
+    /* RIGHT TITLE */
+
+    .right-title{
+      text-align:center;
+      margin-bottom:30px;
+    }
+
+    .right-title h2{
+      font-size:40px;
+      line-height:1.1;
+    }
+
+    .right-title span{
+      color:#d6ff54;
+    }
+
+    /* PRODUCTS */
+
+    .products{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
+      margin-bottom:40px;
+    }
+
+    .product{
+      background:#2b2a2d;
+      border:1px solid #555;
+      padding:10px;
+      text-align:center;
+    }
+
+    .product img{
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      margin-bottom:10px;
+    }
+
+    .product p{
+      font-size:10px;
+      line-height:1.4;
+      color:#d6ff54;
+    }
+
+    /* MIDDLE TEXT */
+
+    .middle-text{
+      text-align:center;
+      margin:50px 0;
+    }
+
+    .middle-text h3{
+      font-size:50px;
+      line-height:1.2;
+      font-weight:bold;
+    }
+
+    .middle-text span{
+      color:#d6ff54;
+    }
+
+    /* SMALL IMAGE */
+
+    .small-image{
+      display:flex;
+      justify-content:center;
+      margin-bottom:40px;
+    }
+
+    .small-image img{
+      width:180px;
+      border-radius:8px;
+    }
+
+    /* FOOTER MODELS */
+
+    .models{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      margin-top:40px;
+    }
+
+    .models img{
+      width:60px;
+      height:120px;
+      object-fit:cover;
+      filter:grayscale(100%);
+    }
+
+    /* FOOTER TEXT */
+
+    .footer-text{
+      text-align:center;
+      font-size:28px;
+      margin-top:30px;
+      font-weight:bold;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:1200px){
+
+      .container{
+        grid-template-columns:1fr;
+        height:auto;
+      }
+
+      .big-title{
+        font-size:100px;
+      }
+
+      .description h2{
+        font-size:38px;
+      }
+
+      .products{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LEFT -->
+
+    <section class="left">
+
+      <img class="bg-image"
+      src="https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg"
+      alt="fashion">
+
+      <!-- NAVBAR -->
+
+      <div class="navbar">
+
+        <div class="logo">AURALEE®</div>
+
+        <div class="nav-links">
+          <span>[ HOME ]</span>
+          <span>[ ABOUT ]</span>
+          <span>[ CAMPAIGN ]</span>
+          <span>[ GALLERY ]</span>
+        </div>
+
+      </div>
+
+      <!-- SEASON -->
+
+      <div class="season">
+        [ SPRING SUMMER ]
+      </div>
+
+      <!-- BIG TEXT -->
+
+      <div class="big-title">
+        AURALEE
+      </div>
+
+      <!-- CENTER IMAGE -->
+
+      <div class="center-image">
+
+        <img src="https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg"
+        alt="model">
+
+      </div>
+
+      <!-- DESCRIPTION -->
+
+      <div class="description">
+
+        <h2>
+          FOUNDED IN TOKYO IN 2015 BY
+          <span>[ RYOTA IWAI ]</span>,
+          AURALEE IS BUILT ON AN UNWAVERING
+          COMMITMENT TO FABRIC DEVELOPMENT,
+          CRAFTSMANSHIP, AND QUIET
+          SOPHISTICATION.
+          <span>[ EACH PIECE ]</span>
+        </h2>
+
+      </div>
+
+    </section>
+
+    <!-- RIGHT -->
+
+    <section class="right">
+
+      <!-- TITLE -->
+
+      <div class="right-title">
+
+        <h2>
+          AVAILABLE <span>WORLDWIDE</span>
+        </h2>
+
+      </div>
+
+      <!-- PRODUCTS -->
+
+      <div class="products">
+
+        <div class="product">
+
+          <img src="https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg">
+
+          <p>SUPER HIGH GAUGE SWEAT PO</p>
+
+        </div>
+
+        <div class="product">
+
+          <img src="https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg">
+
+          <p>RIB KNIT CROPPED CREW</p>
+
+        </div>
+
+        <div class="product">
+
+          <img src="https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg">
+
+          <p>SUPER LIGHT WOOL CHECK</p>
+
+        </div>
+
+        <div class="product">
+
+          <img src="https://images.pexels.com/photos/428340/pexels-photo-428340.jpeg">
+
+          <p>COTTON HIGH GAUGE</p>
+
+        </div>
+
+      </div>
+
+      <!-- MIDDLE TEXT -->
+
+      <div class="middle-text">
+
+        <h3>
+          "FOUNDED TO REDEFINE
+          <span>CREATED</span> WITH RIGOR
+          FORM, FUNCTION,
+          <span>AND FEEL</span>
+          WE DESIGN OBJECTS
+          DESIGNED TO BE"
+        </h3>
+
+      </div>
+
+      <!-- SMALL IMAGE -->
+
+      <div class="small-image">
+
+        <img src="https://images.pexels.com/photos/291762/pexels-photo-291762.jpeg"
+        alt="fashion">
+
+      </div>
+
+      <!-- MODELS -->
+
+      <div class="models">
+
+        <img src="https://images.pexels.com/photos/428340/pexels-photo-428340.jpeg">
+        <img src="https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg">
+        <img src="https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg">
+        <img src="https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg">
+        <img src="https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg">
+
+      </div>
+
+      <!-- FOOTER -->
+
+      <div class="footer-text">
+        QUIET · MATERIAL · CLARITY
+      </div>
+
+    </section>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Empowered Managers UI</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f4f4f4;
+      padding:30px;
+    }
+
+    /* MAIN CONTAINER */
+
+    .container{
+      max-width:1400px;
+      margin:auto;
+      background:white;
+      border:1px solid #d7f1dd;
+      border-radius:25px;
+      padding:50px;
+    }
+
+    /* HEADING */
+
+    .heading{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .small-title{
+      color:#6bbd8f;
+      font-size:14px;
+      font-weight:bold;
+    }
+
+    .heading h1{
+      font-size:70px;
+      line-height:1.1;
+      color:#111;
+      margin:20px 0;
+    }
+
+    .heading p{
+      color:#777;
+      font-size:18px;
+      max-width:700px;
+      margin:auto;
+      line-height:1.6;
+    }
+
+    /* GRID LAYOUT */
+
+    .grid-layout{
+      display:grid;
+      grid-template-columns:1fr 1.5fr;
+      gap:25px;
+    }
+
+    /* LEFT CARD */
+
+    .left-card{
+      background:#fafafa;
+      border:1px solid #e3f3e6;
+      border-radius:25px;
+      padding:30px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    .image-box{
+      display:flex;
+      justify-content:center;
+      margin-bottom:30px;
+    }
+
+    .image-box img{
+      width:75%;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .left-content h2{
+      color:#14856f;
+      font-size:48px;
+      margin-bottom:20px;
+    }
+
+    .left-content p{
+      color:#666;
+      line-height:1.7;
+      font-size:18px;
+    }
+
+    /* RIGHT SIDE */
+
+    .right-side{
+      display:flex;
+      flex-direction:column;
+      gap:25px;
+    }
+
+    /* ANALYTICS CARD */
+
+    .analytics-card{
+      background:#fafafa;
+      border:1px solid #e3f3e6;
+      border-radius:25px;
+      padding:25px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+      align-items:center;
+    }
+
+    .analytics-text h3{
+      font-size:42px;
+      margin-bottom:20px;
+      color:#111;
+    }
+
+    .analytics-text p{
+      color:#666;
+      line-height:1.7;
+      font-size:17px;
+    }
+
+    .chart-box img{
+      width:100%;
+      border-radius:15px;
+    }
+
+    /* BOTTOM CARDS */
+
+    .bottom-cards{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:25px;
+    }
+
+    /* GROW CARD */
+
+    .grow-card{
+      background:#fafafa;
+      border:1px solid #bfe8c9;
+      border-radius:25px;
+      padding:25px;
+    }
+
+    .grow-card h3{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .grow-card p{
+      color:#666;
+      line-height:1.7;
+      margin-bottom:25px;
+      font-size:16px;
+    }
+
+    .profile-box{
+      background:white;
+      border-radius:18px;
+      padding:15px;
+      display:flex;
+      align-items:center;
+      gap:15px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .profile-box img{
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+
+    .profile-box h4{
+      font-size:18px;
+      margin-bottom:5px;
+    }
+
+    .profile-box span{
+      color:#666;
+      font-size:14px;
+    }
+
+    /* TURNOVER CARD */
+
+    .turnover-card{
+      background:linear-gradient(135deg,#007f75,#004f57);
+      border-radius:25px;
+      padding:30px;
+      color:white;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      align-items:flex-start;
+    }
+
+    .turnover-card h2{
+      font-size:52px;
+      line-height:1.1;
+    }
+
+    /* CIRCLE */
+
+    .circle{
+      width:200px;
+      height:200px;
+      border-radius:50%;
+      border:22px solid rgba(255,255,255,0.2);
+      border-top:22px solid #c7ff9d;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-top:40px;
+      align-self:center;
+    }
+
+    .circle span{
+      font-size:40px;
+      font-weight:bold;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:1000px){
+
+      .grid-layout{
+        grid-template-columns:1fr;
+      }
+
+      .analytics-card{
+        grid-template-columns:1fr;
+      }
+
+      .bottom-cards{
+        grid-template-columns:1fr;
+      }
+
+      .heading h1{
+        font-size:45px;
+      }
+
+      .left-content h2{
+        font-size:38px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <section class="container">
+
+    <!-- HEADING -->
+
+    <div class="heading">
+
+      <span class="small-title">
+        Improve Manager Productivity
+      </span>
+
+      <h1>
+        Empowered Managers, <br>
+        Higher Performing Teams
+      </h1>
+
+      <p>
+        Make manager your highest point of leverage with productive
+        meetings, clear expectations, and accountability.
+      </p>
+
+    </div>
+
+    <!-- GRID -->
+
+    <div class="grid-layout">
+
+      <!-- LEFT CARD -->
+
+      <div class="left-card">
+
+        <div class="image-box">
+
+          <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg"
+          alt="Goals">
+
+        </div>
+
+        <div class="left-content">
+
+          <h2>OKRs & Goals</h2>
+
+          <p>
+            Focus individuals and teams on your company's
+            top priorities, tracking progress and risks
+            each step of the way.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE -->
+
+      <div class="right-side">
+
+        <!-- ANALYTICS -->
+
+        <div class="analytics-card">
+
+          <div class="analytics-text">
+
+            <h3>Analytics</h3>
+
+            <p>
+              Seamlessly connect performance review cycle
+              results into compensation decisions,
+              creating fair and equitable pay outcomes.
+            </p>
+
+          </div>
+
+          <div class="chart-box">
+
+            <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg"
+            alt="chart">
+
+          </div>
+
+        </div>
+
+        <!-- BOTTOM CARDS -->
+
+        <div class="bottom-cards">
+
+          <!-- GROW CARD -->
+
+          <div class="grow-card">
+
+            <h3>Grow</h3>
+
+            <p>
+              Increase growth and engagement with
+              HireSphere's dynamic employee
+              development tools.
+            </p>
+
+            <div class="profile-box">
+
+              <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
+              alt="profile">
+
+              <div>
+                <h4>Bethany Hule</h4>
+                <span>People Operations</span>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- TURNOVER CARD -->
+
+          <div class="turnover-card">
+
+            <h2>
+              Reduced <br>
+              Turnover 27%
+            </h2>
+
+            <div class="circle">
+              <span>27%</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>

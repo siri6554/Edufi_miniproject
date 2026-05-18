@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Job Landing Page</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f5f5f5;
+      padding:20px;
+    }
+
+    /* MAIN CONTAINER */
+
+    .container{
+      max-width:1400px;
+      margin:auto;
+      background:white;
+      overflow:hidden;
+      position:relative;
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:25px 40px;
+    }
+
+    .logo{
+      font-size:36px;
+      font-weight:bold;
+      color:#00b26b;
+    }
+
+    .logo span{
+      color:#111;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:40px;
+      list-style:none;
+      color:#333;
+      font-size:16px;
+    }
+
+    .demo-btn{
+      background:#12c972;
+      color:white;
+      border:none;
+      padding:14px 28px;
+      border-radius:12px;
+      font-size:16px;
+      cursor:pointer;
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      padding:40px;
+      align-items:center;
+      position:relative;
+    }
+
+    /* LEFT SIDE */
+
+    .left h1{
+      font-size:95px;
+      line-height:1;
+      color:#061a2b;
+      margin-bottom:25px;
+    }
+
+    .left p{
+      color:#666;
+      font-size:18px;
+      line-height:1.6;
+      max-width:550px;
+      margin-bottom:35px;
+    }
+
+    /* SEARCH BOX */
+
+    .search-box{
+      background:white;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      border-radius:16px;
+      padding:10px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      max-width:500px;
+      margin-bottom:50px;
+    }
+
+    .search-box input{
+      border:none;
+      outline:none;
+      width:100%;
+      padding:15px;
+      font-size:16px;
+    }
+
+    .search-btn{
+      background:#12c972;
+      color:white;
+      border:none;
+      padding:14px 35px;
+      border-radius:12px;
+      cursor:pointer;
+      font-size:16px;
+    }
+
+    /* STATS */
+
+    .stats{
+      display:flex;
+      align-items:center;
+      gap:30px;
+    }
+
+    .stats-box{
+      background:#e5d6ff;
+      padding:30px;
+      border-radius:18px;
+      text-align:center;
+      min-width:180px;
+    }
+
+    .stats-box h2{
+      font-size:58px;
+      color:#061a2b;
+    }
+
+    .stats-box span{
+      color:#555;
+      font-size:18px;
+    }
+
+    .stats-text h3{
+      font-size:48px;
+      line-height:1.2;
+      color:#061a2b;
+      margin-bottom:10px;
+    }
+
+    .stats-text p{
+      margin-bottom:15px;
+    }
+
+    .stats-text a{
+      color:#00b26b;
+      text-decoration:none;
+      font-weight:bold;
+      font-size:18px;
+    }
+
+    /* RIGHT SIDE */
+
+    .right{
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .shape{
+      position:absolute;
+      width:700px;
+      height:700px;
+      background:#003c43;
+      clip-path:polygon(30% 0%,100% 0%,100% 100%,60% 100%);
+      top:-120px;
+      right:-120px;
+      z-index:0;
+    }
+
+    .purple-shape{
+      position:absolute;
+      width:300px;
+      height:300px;
+      background:#d8b7ff;
+      transform:rotate(45deg);
+      top:-120px;
+      right:250px;
+      z-index:0;
+    }
+
+    /* IMAGE */
+
+    .image-card{
+      position:relative;
+      z-index:2;
+    }
+
+    .image-card img{
+      width:430px;
+      border-radius:10px;
+      display:block;
+    }
+
+    /* FLOATING CARD */
+
+    .subscribe-box{
+      position:absolute;
+      top:40px;
+      left:-80px;
+      background:white;
+      padding:18px 24px;
+      border-radius:16px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.12);
+      font-weight:bold;
+    }
+
+    .candidate-box{
+      position:absolute;
+      bottom:-30px;
+      left:-40px;
+      background:white;
+      padding:20px 25px;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .candidate-box h4{
+      margin-bottom:10px;
+      font-size:24px;
+    }
+
+    .avatars{
+      display:flex;
+      align-items:center;
+    }
+
+    .avatar{
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      background:#ddd;
+      margin-right:-10px;
+      border:3px solid white;
+    }
+
+    .plus{
+      width:40px;
+      height:40px;
+      background:#12c972;
+      color:white;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-left:10px;
+      font-size:22px;
+    }
+
+    /* FORM */
+
+    .job-form{
+      position:absolute;
+      top:20px;
+      right:20px;
+      background:white;
+      padding:25px;
+      border-radius:20px;
+      width:250px;
+      z-index:3;
+    }
+
+    .job-form input{
+      width:100%;
+      padding:14px;
+      margin-bottom:15px;
+      border:1px solid #ddd;
+      border-radius:10px;
+      outline:none;
+    }
+
+    .job-form button{
+      width:100%;
+      padding:14px;
+      background:#12c972;
+      color:white;
+      border:none;
+      border-radius:10px;
+      cursor:pointer;
+    }
+
+    /* BRANDS */
+
+    .brands{
+      display:flex;
+      justify-content:space-around;
+      align-items:center;
+      padding:35px;
+      border-top:1px solid #eee;
+      color:#888;
+      font-size:48px;
+      font-weight:bold;
+      flex-wrap:wrap;
+      gap:30px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:1100px){
+
+      .hero{
+        grid-template-columns:1fr;
+      }
+
+      .left h1{
+        font-size:60px;
+      }
+
+      .stats{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .nav-links{
+        display:none;
+      }
+
+      .job-form{
+        position:relative;
+        top:auto;
+        right:auto;
+        margin-top:20px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+      <div class="logo">
+        Job<span>Fine</span>
+      </div>
+
+      <ul class="nav-links">
+        <li>Platform</li>
+        <li>Solution</li>
+        <li>Resources</li>
+        <li>Company</li>
+      </ul>
+
+      <button class="demo-btn">
+        Book A Demo
+      </button>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <!-- LEFT -->
+
+      <div class="left">
+
+        <h1>
+          Find Your <br>
+          Ideal Job
+        </h1>
+
+        <p>
+          The digital marketing solution provider for Ford Dealers and
+          Lincoln Retailers turned to the DataRobot.
+        </p>
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+          <input type="text" placeholder="Search job">
+
+          <button class="search-btn">
+            Search
+          </button>
+
+        </div>
+
+        <!-- STATS -->
+
+        <div class="stats">
+
+          <div class="stats-box">
+
+            <h2>8M+</h2>
+            <span>Matches Made</span>
+
+          </div>
+
+          <div class="stats-text">
+
+            <h3>
+              Unlocking your <br>
+              potential
+            </h3>
+
+            <p>
+              Here to help with our logistics
+            </p>
+
+            <a href="#">
+              Browse All Categories ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+
+      <div class="right">
+
+        <div class="shape"></div>
+
+        <div class="purple-shape"></div>
+
+        <!-- IMAGE -->
+
+        <div class="image-card">
+
+          <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg"
+          alt="woman">
+
+          <!-- SUBSCRIBE -->
+
+          <div class="subscribe-box">
+            🔔 Job Alert Subscribe
+          </div>
+
+          <!-- CANDIDATE -->
+
+          <div class="candidate-box">
+
+            <h4>5k+ candidates get job</h4>
+
+            <div class="avatars">
+
+              <div class="avatar"></div>
+              <div class="avatar"></div>
+              <div class="avatar"></div>
+              <div class="avatar"></div>
+
+              <div class="plus">+</div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- FORM -->
+
+        <div class="job-form">
+
+          <input type="text" placeholder="Type of Work">
+
+          <input type="text" placeholder="Position">
+
+          <button>
+            Search Talent
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- BRANDS -->
+
+    <div class="brands">
+
+      <span>aws</span>
+      <span>Walmart</span>
+      <span>HBO</span>
+      <span>Vanguard</span>
+      <span>TIME</span>
+      <span>Levi's</span>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
